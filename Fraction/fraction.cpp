@@ -1,10 +1,10 @@
 #include "fraction.h"
 
-	fraction::fraction() //конструктор
+	fraction::fraction() //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	{
 		x = 0; y = 1;
 	}
-	fraction::fraction(int a, int b) //перегрузка
+	fraction::fraction(int a, int b) //РїРµСЂРµРіСЂСѓР·РєР°
 	{
 		x = a;
 		if (b != 0) y = b;
@@ -15,7 +15,7 @@
 		}
 	}
 
-    fraction fraction::add (fraction b) // сложение дробей
+    fraction fraction::add (fraction b) // СЃР»РѕР¶РµРЅРёРµ РґСЂРѕР±РµР№
 	{
 		fraction sum;
 		sum.x = x * b.y + b.x*y;
@@ -25,14 +25,14 @@
 		sum.y = sum.y / d;
 		return sum;
 	}
-	// аналогично вычитаение
-	void fraction:: derive(fraction A)
+	// Р°РЅР°Р»РѕРіРёС‡РЅРѕ РІС‹С‡РёС‚Р°РµРЅРёРµ
+	void fraction:: derive(fraction A)//РІС‹РІРѕРґ
 	{
 		std::cout << A.x<<std::endl;
 		std::cout << '-' << std::endl;
 		std::cout << A.y<<std::endl<<std::endl;
 	}
-	int fraction::nod(int a, int b) //NOD Алгоритм Евклида
+	int fraction::nod(int a, int b) //NOD РђР»РіРѕСЂРёС‚Рј Р•РІРєР»РёРґР°
 	{
 
 		while (a != 0 && b != 0)
@@ -45,7 +45,7 @@
 		return a + b;
 	}
 
-	fraction fraction::multi(fraction c) //умножение
+	fraction fraction::multi(fraction c) //СѓРјРЅРѕР¶РµРЅРёРµ
 	{
 		fraction mul;
 		mul.x=x*c.x;
@@ -55,7 +55,7 @@
 		mul.y =mul.y /d;
 		return mul;
 	}
-	fraction fraction:: dir(fraction d)//деление
+	fraction fraction:: dir(fraction d)//РґРµР»РµРЅРёРµ
 	{
 		fraction dev;
 		dev.x = x * d.y;
