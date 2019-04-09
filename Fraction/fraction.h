@@ -1,6 +1,6 @@
 #pragma once
 #include<iostream>
-//Ξοπεδελενθÿ 
+//ΠΠΏΡ€ΠµΠ΄ΠµΠ»ΠµΠ½ΠΈΡ 
 class fraction
 {
 	int x, y;
