@@ -3,7 +3,7 @@
 
 
 int main() {
-	
+	setlocale(LC_ALL, "Russian");
 	fraction a(4, 5);
 	fraction b(8, 6);	
 	a.derive(a.multi(b));
