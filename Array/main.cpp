@@ -8,11 +8,12 @@ int main()
 	int n;
 	std::cin >> n;
 	A obj(n);
-	obj.redrand();
-	obj.output();
-	obj.spread();
-	obj.output();
-	obj.equaly();
+		obj.redrand();
+		obj.output();
+		obj.equaly();
+		obj.spread();
+		obj.output();
+
 	system("pause");
 	return 0;
 }

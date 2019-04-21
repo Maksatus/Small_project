@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
-#include "stdlib.h"
+#include <stdlib.h>
+
 class A
 {
 	int *arr;

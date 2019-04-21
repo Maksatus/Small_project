@@ -1,5 +1,9 @@
 #include "A.h"
-A::A() {}
+A::A() 
+{
+	 arr=NULL;
+	 count=0;
+}
 
 A::A(int n)
 {
@@ -15,7 +19,7 @@ void A::output()
 {
 	for (int i=0;i<count;i++)
 		std::cout << arr[i] << ' ';
-	std::cout << std::endl;
+	std::cout << std::endl << std:: endl;
 }
 
 void A::spread() {
@@ -36,7 +40,7 @@ void A::equaly() {
 			}
 		}
 	}
-	std::cout <<"Number of equal elements "<<count-temp << std::endl;
+	std::cout <<"Number of equal elements : "<<temp<< std::endl;
 }
 A::~A()
 {
