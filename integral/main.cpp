@@ -80,16 +80,16 @@ int main()
 	setlocale(LC_ALL, "rus");
 	double a, b;
 	int n = 50;
-	cout << "Ââåäèòå íèæíèé ïðåäåë èíòåãðèðîâàíèÿ" << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¸Ð¶Ð½Ð¸Ð¹ Ð¿Ñ€ÐµÐ´ÐµÐ» Ð¸Ð½Ñ‚ÐµÐ³Ñ€Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ñ" << endl;
 	cin >> a;
-	cout << "Ââåäèòå âåðõíèé ïðåäåë èíòåãðèðîâàíèÿ" << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²ÐµÑ€Ñ…Ð½Ð¸Ð¹ Ð¿Ñ€ÐµÐ´ÐµÐ» Ð¸Ð½Ñ‚ÐµÐ³Ñ€Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ñ" << endl;
 	cin >> b;
 
-	cout << "Ëåâûé ïðÿì: " << integr_lefttriangle(n, a, b) << endl;
-	cout << "Ïðàâûé ïðÿì: " << integr_righttriangle(n,a,b) << endl;
-	cout << "Ñðåäíèå ïðÿì: " << integr_middle(n,a,b) << endl;
-	cout << "Òðàïåöèÿ: " << trapeze(n, a, b) << endl;
-	cout << "Ñèìïñîí: " << simpson(n, a, b) << endl;
+	cout << "Ð›ÐµÐ²Ñ‹Ð¹ Ð¿Ñ€ÑÐ¼: " << integr_lefttriangle(n, a, b) << endl;
+	cout << "ÐŸÑ€Ð°Ð²Ñ‹Ð¹ Ð¿Ñ€ÑÐ¼: " << integr_righttriangle(n,a,b) << endl;
+	cout << "Ð¡Ñ€ÐµÐ´Ð½Ð¸Ðµ Ð¿Ñ€ÑÐ¼: " << integr_middle(n,a,b) << endl;
+	cout << "Ð¢Ñ€Ð°Ð¿ÐµÑ†Ð¸Ñ: " << trapeze(n, a, b) << endl;
+	cout << "Ð¡Ð¸Ð¼Ð¿ÑÐ¾Ð½: " << simpson(n, a, b) << endl;
 	system("pause");
 	return 0;
 }
