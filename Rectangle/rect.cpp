@@ -32,6 +32,7 @@
 		{
 			cout << "error";
 			exit(1);
+			return C;
 		}
 	}
 	point rect::set_D()
@@ -51,6 +52,7 @@
 		{
 			cout << "error";
 			exit(1);
+			return D;
 		}
 	}
 	float rect::area()

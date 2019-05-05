@@ -1,9 +1,9 @@
 #pragma once
 #include "rect.h"
-class overlap : public rect
+class overlap 
 {
 public:
 
-	float Sum_area(rect *a,int n);
+	float Sum_area(rect *a, unsigned short int n);
 };
 

@@ -1,11 +1,11 @@
 #include "overlap.h"
 
 
-float overlap::Sum_area(rect *a,int n)
+float overlap::Sum_area(rect *a, unsigned short int n)
 {
-	float D_x=-1, D_y=-1, C_x= a[0].set_C().x, C_y= a[0].set_C().x;
+	float D_x=-1, D_y=-1, C_x= a[0].set_C().x, C_y= a[0].set_C().y;
 	float s=0;
-	for (int i = 0; i <= n; i++)
+	for (int i = 0; i < n; i++)
 	{
 		if (a[i].set_D().x>D_x) 
 		{
@@ -25,12 +25,11 @@ float overlap::Sum_area(rect *a,int n)
 		}
 	}
 	
-	if ((D_x < C_x) && (D_y < C_y)) 
+	if (D_x < C_x &&D_y < C_y) 
 	{
-		s = (C_x-D_x)*(C_y-D_y);
+		s = (C_x - D_x)*(C_y - D_y);
 		return s;
 	}
-	else {
-		return 0;
-	}
+	else 
+		return -1;
 }
