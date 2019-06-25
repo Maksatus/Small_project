@@ -1,0 +1,47 @@
+#include <iostream>
+
+using namespace std;
+
+class MyClass {
+	int *data;
+	int size;
+public:
+	MyClass(int size) 
+	{
+		this->size = size;
+		this->data = new int[size];
+		for (int i = 0; i < size; i++)
+		{
+			data[i] = i;
+		}
+		cout << "cons " << this << endl;
+	}	
+	
+	MyClass(const MyClass &other)
+	{
+		this->size = other.size;
+		this->data = new int[other.size];		
+		
+		for (int i = 0; i < other.size; i++)
+		{
+			this->data[i] = other.data[i];
+		}
+		
+		cout << "cop cons  " << this << endl;
+	}
+	
+	~MyClass() 
+	{
+		cout << "des " << this << endl;
+		delete[] data;
+	}
+};
+
+
+int main()
+{
+	MyClass a(5);
+	MyClass b(a);
+	getchar();
+	return 0;
+}
