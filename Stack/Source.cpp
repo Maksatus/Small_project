@@ -16,13 +16,13 @@ public:
 	stack(const stack<T>&);     
 	~stack();                         
 
-	inline void push(const T&);     // поместить элемент в вершину стека
-	inline T pop();                   // удалить элемент из вершины стека и вернуть его
-	inline void printStack();         // вывод стека на экран
-	inline const T& Peek(int) const; // n-й элемент от вершины стека
-	inline int getStackSize() const;  // получить размер стека
-	inline T* getPtr() const;         // получить указатель на стек
-	inline int getTop() const;        // получить номер текущего элемента в стеке
+	inline void push(const T&);       // РїРѕРјРµСЃС‚РёС‚СЊ СЌР»РµРјРµРЅС‚ РІ РІРµСЂС€РёРЅСѓ СЃС‚РµРєР°
+	inline T pop();                   // СѓРґР°Р»РёС‚СЊ СЌР»РµРјРµРЅС‚ РёР· РІРµСЂС€РёРЅС‹ СЃС‚РµРєР° Рё РІРµСЂРЅСѓС‚СЊ РµРіРѕ
+	inline void printStack();         // РІС‹РІРѕРґ СЃС‚РµРєР° РЅР° СЌРєСЂР°РЅ
+	inline const T& Peek(int) const;  // n-Р№ СЌР»РµРјРµРЅС‚ РѕС‚ РІРµСЂС€РёРЅС‹ СЃС‚РµРєР°
+	inline int getStackSize() const;  // РїРѕР»СѓС‡РёС‚СЊ СЂР°Р·РјРµСЂ СЃС‚РµРєР°
+	inline T* getPtr() const;         // РїРѕР»СѓС‡РёС‚СЊ СѓРєР°Р·Р°С‚РµР»СЊ РЅР° СЃС‚РµРє
+	inline int getTop() const;        // РїРѕР»СѓС‡РёС‚СЊ РЅРѕРјРµСЂ С‚РµРєСѓС‰РµРіРѕ СЌР»РµРјРµРЅС‚Р° РІ СЃС‚РµРєРµ
 };
 template <class T>
 stack<T>::stack(int maxSize) : size(maxSize)
@@ -82,7 +82,7 @@ int main()
 {
 	setlocale(LC_ALL,"RU");
 	int n;
-	cout << "Кол-во эл: ";	cin >> n;
+	cout << "ГЉГ®Г«-ГўГ® ГЅГ«: ";	cin >> n;
 	stack<char> stackSymbol(n);
 	int ct = 0;
 	char ch;
@@ -96,17 +96,17 @@ int main()
 	cout << endl;
 	stackSymbol.printStack(); 
 
-	cout << "\n\nУдалим элемент из стека\n";
+	cout << "\n\nРЈРґР°Р»РёРј СЌР»РµРјРµРЅС‚ РёР· СЃС‚РµРєР°\n";
 	stackSymbol.pop();
 
 	stackSymbol.printStack();
 
 	stack<char> newStack(stackSymbol);
 
-	cout << "\n\nСработал конструктор копирования!\n";
+	cout << "\n\nРЎСЂР°Р±РѕС‚Р°Р» РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ!\n";
 	newStack.printStack();
 
-	cout << "Второй в очереди элемент: " << newStack.Peek(2) << endl;
+	cout << "Г‚Р’С‚РѕСЂРѕР№ РІ РѕС‡РµСЂРµРґРё СЌР»РµРјРµРЅС‚: " << newStack.Peek(2) << endl;
 
 	return 0;
 }
