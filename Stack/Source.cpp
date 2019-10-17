@@ -82,7 +82,7 @@ int main()
 {
 	setlocale(LC_ALL,"RU");
 	int n;
-	cout << "Êîë-âî ýë: ";	cin >> n;
+	cout << "Кол-во эл: ";	cin >> n;
 	stack<char> stackSymbol(n);
 	int ct = 0;
 	char ch;
@@ -106,7 +106,7 @@ int main()
 	cout << "\n\nСработал конструктор копирования!\n";
 	newStack.printStack();
 
-	cout << "ÂВторой в очереди элемент: " << newStack.Peek(2) << endl;
+	cout << "Второй в очереди элемент: " << newStack.Peek(2) << endl;
 
 	return 0;
 }
