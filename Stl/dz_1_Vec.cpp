@@ -6,49 +6,77 @@
 
 using namespace std;
 
-
-void print(vector<vector<size_t> > ob)
+class SuperTupe
 {
-	 for (vector<size_t>& vec_current : ob) {
-		 for (size_t& value : vec_current) {
-			 cout << value << "  ";
-		 }
-		 cout << endl;
-	 }
- }
-
-
-vector<vector<size_t> > input( size_t size)
-{
-	vector<vector<size_t> > ob;
-	for (size_t i = 0; i < size; ++i)
+	char* value;
+	SuperTupe()
 	{
-		vector<size_t> temp;
-		for (size_t j = 0; j < size; ++j)
-			temp.push_back(10 + rand() % 66);
-		ob.push_back(temp);
+		value = 0;
 	}
-	//print(ob);
-	return ob; 
- }
+	SuperTupe(const int size) {
+		value = new char[size];
+	}
+	
+	
+	
+	
+	
+	~SuperTupe()
+	{
+		delete[]value;
+	}
+	SuperTupe& operator=(const SuperTupe& ob) {
+
+	}
+	ostream& operator <<(ostream& os) {
+
+		return os;
+	}
+};
+
+void print(vector<vector<SuperTupe> > ob)
+{
+	for (vector<SuperTupe>& vec_current : ob) {
+		for (SuperTupe& value : vec_current) {
+			cout << value << "  ";
+		}
+		cout << endl;
+	}
+}
+
+
+vector<vector<SuperTupe> > input(size_t size)
+{
+	vector<vector<SuperTupe> > ob;
+	vector<SuperTupe> temp;
+
+	for (vector<SuperTupe>& vec_current : ob) {
+		for (SuperTupe& value : vec_current) {
+			char ch = rand();
+			temp.push_back(ch);
+			ob.push_back(temp);
+		}
+	}
+	return ob;
+}
 
 int main(int argc, char* argv[])
 {
-	vector<vector<size_t> > matrix;
+	vector<vector<SuperTupe> > matrix;
 	size_t size = 5;
 	matrix = input(size);
 	print(matrix);
-	
-	cout <<"\nSize: " <<matrix.size();
+
+	cout << "\nSize: " << matrix.size();
 
 	if (matrix.empty()) { cout << "\nempty"; }
-
-	size_t front_num = matrix.front().front();
-	size_t back_num = matrix.back().back();
+	
+	SuperTupe front_num = matrix.front().front();
+	SuperTupe back_num = matrix.back().back();
 	cout << "\nfront_num:" << front_num;
 	cout << "\nback_num:" << back_num;
 
- 
+
 
 	return 0;
 }
