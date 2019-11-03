@@ -13,6 +13,14 @@ public:
 	CoordInt(int x,int y);
 	int get_x();
 	int get_y();
+	
+	struct compare {
+		bool operator()(CoordInt const& lhs, CoordInt const& rhs) 
+		{
+			return ((lhs.x * lhs.x) + (lhs.y * lhs.y)) > ((rhs.x * rhs.x) + (rhs.y * rhs.y));
+		}
+	};
+
 	CoordInt& operator=(const CoordInt& ob);
 	friend bool operator < (const CoordInt& v1, const CoordInt& v2);
 	friend bool operator > (const CoordInt& v1, const CoordInt& v2);

@@ -59,8 +59,6 @@
 	}
 	
 
-
-
 	const CoordInt& operator++(CoordInt& ob)
 	{
 		++ob.x;

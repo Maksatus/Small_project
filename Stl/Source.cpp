@@ -1,11 +1,7 @@
 #include "CoordInt.h"
 #include <math.h>
-
-
 #define LIMIT 50
 using namespace std;
-
- 
 
 void print(vector<CoordInt>& ob)
 {
@@ -77,16 +73,18 @@ void example_2(vector<CoordInt>& ob,CoordInt val,int rad)
 
 void example_3(vector<CoordInt>& ob)
 {
-	sort(ob.begin(), ob.end(), [](CoordInt v1, CoordInt v2) {return v1 < v2; });
+	sort(ob.begin(), ob.end(), CoordInt::compare());
+  //sort(ob.begin(), ob.end(), [](CoordInt v1, CoordInt v2) {return v1 < v2; });
 	cout << "\nWork out sort\n";
 	print(ob);
 }
 
 
 void example_4(vector<CoordInt>& ob)
-{
-		max((ob.begin,ob.end),[](const CoordInt& v1, const CoordInt& v2) { return v1 < v2; });
+{	
+	
 }
+
 int main(int argc, char* argv[])
 {
 	int N = 15;
@@ -102,7 +100,7 @@ int main(int argc, char* argv[])
 	cout << "The radius of the circle\n";
 	cin >> radius;
 	example_2(matrix,val,radius);
-	
+
 	example_3(matrix);*/
 	example_4(matrix);
 	return 0;
