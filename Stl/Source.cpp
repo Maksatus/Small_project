@@ -1,9 +1,11 @@
 #include "CoordInt.h"
 #include <math.h>
 
+
 #define LIMIT 50
 using namespace std;
 
+ 
 
 void print(vector<CoordInt>& ob)
 {
@@ -73,13 +75,25 @@ void example_2(vector<CoordInt>& ob,CoordInt val,int rad)
 	cout << "\nMin= " << min<<endl;
 }
 
+void example_3(vector<CoordInt>& ob)
+{
+	sort(ob.begin(), ob.end(), [](CoordInt v1, CoordInt v2) {return v1 < v2; });
+	cout << "\nWork out sort\n";
+	print(ob);
+}
+
+
+void example_4(vector<CoordInt>& ob)
+{
+		max((ob.begin,ob.end),[](const CoordInt& v1, const CoordInt& v2) { return v1 < v2; });
+}
 int main(int argc, char* argv[])
 {
-
+	int N = 15;
 	vector<CoordInt> matrix;
-	matrix = read(matrix, 15);
+	matrix = read(matrix, N);
 	print(matrix);
-	example_1(matrix);
+	/*example_1(matrix);
 	
 	cout << "Enter a point\n";
 	CoordInt val;
@@ -89,5 +103,7 @@ int main(int argc, char* argv[])
 	cin >> radius;
 	example_2(matrix,val,radius);
 	
+	example_3(matrix);*/
+	example_4(matrix);
 	return 0;
 }

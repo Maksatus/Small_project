@@ -36,6 +36,15 @@
 		return false;
 	}
 
+	bool operator>(const CoordInt& v1, const CoordInt& v2)
+	{
+		if (((v1.x * v1.x) + (v1.y * v1.y)) > ((v2.x * v2.x) + (v2.y * v2.y)))
+		{
+			return true;
+		}
+		return false;
+	}
+
 	std::ostream& operator<<(std::ostream& os, const CoordInt& ob)
 	{
 		os<< "x: " << ob.x << " y: " << ob.y<<"\n";

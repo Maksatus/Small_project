@@ -15,6 +15,7 @@ public:
 	int get_y();
 	CoordInt& operator=(const CoordInt& ob);
 	friend bool operator < (const CoordInt& v1, const CoordInt& v2);
+	friend bool operator > (const CoordInt& v1, const CoordInt& v2);
 	friend std::ostream& operator<<(std::ostream& os, const CoordInt& ob);
 	friend std::istream& operator>>(std::istream& in,  CoordInt& ob);
 	const CoordInt operator+(const CoordInt& ob);
