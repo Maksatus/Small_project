@@ -10,12 +10,12 @@ class CoordInt
 	int y;
 public:
 	CoordInt();
-	CoordInt(int x,int y);
+	CoordInt(int x, int y);
 	int get_x();
 	int get_y();
-	
+
 	struct compare {
-		bool operator()(CoordInt const& lhs, CoordInt const& rhs) 
+		bool operator()(CoordInt const& lhs, CoordInt const& rhs)
 		{
 			return ((lhs.x * lhs.x) + (lhs.y * lhs.y)) > ((rhs.x * rhs.x) + (rhs.y * rhs.y));
 		}
@@ -25,7 +25,7 @@ public:
 	friend bool operator < (const CoordInt& v1, const CoordInt& v2);
 	friend bool operator > (const CoordInt& v1, const CoordInt& v2);
 	friend std::ostream& operator<<(std::ostream& os, const CoordInt& ob);
-	friend std::istream& operator>>(std::istream& in,  CoordInt& ob);
+	friend std::istream& operator>>(std::istream& in, CoordInt& ob);
 	const CoordInt operator+(const CoordInt& ob);
 	const CoordInt operator-(const CoordInt& ob);
 	friend const CoordInt& operator++(CoordInt& ob);
