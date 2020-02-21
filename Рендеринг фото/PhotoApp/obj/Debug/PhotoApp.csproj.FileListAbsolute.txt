@@ -1,0 +1,9 @@
+E:\source\repos\PhotoApp\PhotoApp\bin\Debug\PhotoApp.exe.config
+E:\source\repos\PhotoApp\PhotoApp\bin\Debug\PhotoApp.exe
+E:\source\repos\PhotoApp\PhotoApp\bin\Debug\PhotoApp.pdb
+E:\source\repos\PhotoApp\PhotoApp\obj\Debug\PhotoApp.csprojAssemblyReference.cache
+E:\source\repos\PhotoApp\PhotoApp\obj\Debug\PhotoApp.Form1.resources
+E:\source\repos\PhotoApp\PhotoApp\obj\Debug\PhotoApp.Properties.Resources.resources
+E:\source\repos\PhotoApp\PhotoApp\obj\Debug\PhotoApp.csproj.GenerateResource.cache
+E:\source\repos\PhotoApp\PhotoApp\obj\Debug\PhotoApp.exe
+E:\source\repos\PhotoApp\PhotoApp\obj\Debug\PhotoApp.pdb
